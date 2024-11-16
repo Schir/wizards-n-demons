@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0al81y6752mi"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvflc6rkmrbhl" path="res://testmap1 - Region 1.obj" id="1_x3kde"]
+[ext_resource type="Script" path="res://cameramove.gd" id="2_5ch11"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Testmap1-Region1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+mesh = ExtResource("1_x3kde")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.5, 0.5, 0.5)
+script = ExtResource("2_5ch11")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.5, -0.5, 0.5)
+light_energy = 6.818
+light_indirect_energy = 3.13
+light_specular = 1.47
+omni_range = 14.905
